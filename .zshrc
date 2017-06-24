@@ -109,6 +109,6 @@ export PATH=$PATH:/home/erfan/.gem/ruby/2.4.0/bin:/root/.gem/ruby/2.4.0/bin
 # fuck setup 
 eval $(thefuck --alias)
 
-export VIUSAL=vim
+export VISUAL="vim"
 export TERMINAL=termite
 # source /usr/local/bin/virtualenvwrapper.sh
