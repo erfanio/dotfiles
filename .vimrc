@@ -103,7 +103,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-  color monokai
+  color molokai
 catch
 endtry
 

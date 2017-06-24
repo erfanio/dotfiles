@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 
 " The plugins to be installed
 Plug 'kien/ctrlp.vim'
-Plug 'sickill/vim-monokai'
+Plug 'tomasr/molokai'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/matchit.zip'
 Plug 'scrooloose/nerdtree'
@@ -18,7 +18,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'christoomey/vim-tmux-navigator'
+Plug 'maxbrunsfeld/vim-yankstack'
 
 " Initialize plugin system
 call plug#end()
