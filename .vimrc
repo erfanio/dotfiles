@@ -1,7 +1,27 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ~/.vim_runtime/plugin_configs.vim
+""""""""""""""""""""""""""""""
+" => install plugins
+""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+" The plugins to be installed
+Plug 'kien/ctrlp.vim'
+Plug 'tomasr/molokai'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'vim-scripts/matchit.zip'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tweekmonster/braceless.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'tpope/vim-surround'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'maxbrunsfeld/vim-yankstack'
+
+" Initialize plugin system
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => general
@@ -303,6 +323,7 @@ endfunction
 """"""""""""""""""""""
 """"""""""""""""""""""
 
+source ~/.vim_runtime/plugin_configs.vim
 source ~/.vim_runtime/filetypes.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
