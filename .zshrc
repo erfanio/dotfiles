@@ -99,8 +99,6 @@ alias movpn="sudo systemctl start openvpn-client@AU_Melbourne.service"
 alias killvpn="sudo kill -s SIGKILL $(ps aux | grep '[A]U_Melbourne' | awk '{print $2}')"
 alias torrentvpn="sudo openvpn --config /etc/openvpn/client/US_California.conf"
 alias fixdisplay="xrandr --output eDP1 --mode 1920x1080"
-# git alias
-alias gitco="git checkout"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
