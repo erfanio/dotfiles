@@ -191,6 +191,12 @@ bindsym $mod+Pause mode "$mode_system"
 # setup autolock
 exec --no-startup-id XSECURELOCK_WANT_FIRST_KEYPRESS=1 xss-lock -n /home/erfan/.config/i3/dim-screen.sh -- xsecurelock auth_pam_x11 saver_blank
 
+# start compton
+# exec --no-startup-id compton -b
+
+# set background pic
+exec --no-startup-id ~/.fehbg &
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% # increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% # decrease sound volume
@@ -205,7 +211,6 @@ bindsym Print exec --no-startup-idscrot -s ~/scrshot.png # && xclip -selection c
 
 # albert
 exec --no-startup-id albert
-bindsym Ctrl+Space exec albert
 
 # fsearch
 bindsym $mod+Shift+f exec fsearch

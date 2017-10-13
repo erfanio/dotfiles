@@ -4,6 +4,7 @@ font = monospace 11
 audible_bell = true
 visible_bell = false
 scrollback_lines = 10000
+clickable_url = false
 
 [colors]
 

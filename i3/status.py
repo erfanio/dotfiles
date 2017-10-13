@@ -54,7 +54,7 @@ def enable_dpms(self):
         run_through_shell("xset -dpms s off", True)
     else:
         run_through_shell("xset +dpms s on", True)
-        run_through_shell("xset s 120 5", True)
+        run_through_shell("xset s 120 10", True)
 
 status.register("dpms",
     on_leftclick=enable_dpms)
