@@ -100,13 +100,7 @@ alias killvpn="sudo kill -s SIGKILL $(ps aux | grep '[A]U_Melbourne' | awk '{pri
 alias torrentvpn="sudo openvpn --config /etc/openvpn/client/US_California.conf"
 alias fixdisplay="xrandr --output eDP1 --mode 1920x1080"
 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-export PATH=$PATH:/home/erfan/.gem/ruby/2.4.0/bin:/root/.gem/ruby/2.4.0/bin
-# fuck setup 
-eval $(thefuck --alias)
+export GOPATH=$HOME/go
 
 export VISUAL="vim"
 export TERMINAL=termite
-# source /usr/local/bin/virtualenvwrapper.sh
