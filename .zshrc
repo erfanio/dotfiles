@@ -64,43 +64,13 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias fixinternet="sudo systemctl stop openvpn-client@AU_Melbourne.service && sudo systemctl start openvpn-client@AU_Melbourne"
-alias whatvpn="sudo systemctl status openvpn-client@AU_Melbourne.service"
-alias novpn="sudo systemctl stop openvpn-client@AU_Melbourne.service"
-alias movpn="sudo systemctl start openvpn-client@AU_Melbourne.service"
-alias killvpn="sudo kill -s SIGKILL $(ps aux | grep '[A]U_Melbourne' | awk '{print $2}')"
-alias torrentvpn="sudo openvpn --config /etc/openvpn/client/US_California.conf"
-alias fixdisplay="xrandr --output eDP1 --mode 1920x1080"
+export LANG=en_US.UTF-8
+alias opd="xdg-open . & ; disown xdg-open"
 
 export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
 
 export VISUAL="vim"
 export TERMINAL=termite
+
+source $HOME/.zshrc_custom
