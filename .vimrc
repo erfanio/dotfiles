@@ -13,12 +13,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-surround'
 Plug 'tweekmonster/braceless.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'fatih/vim-go'
 
 " Initialize plugin system
 call plug#end()
@@ -365,3 +367,5 @@ set number          " line number
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'vice'
 let g:airline#extensions#tabline#enabled = 1
+
+set autoread
