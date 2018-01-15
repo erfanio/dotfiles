@@ -1,7 +1,6 @@
 [options]
-# font = Source Code Pro for Powerline 11
-font = monospace 11
-audible_bell = true
+font = Source Code Pro for Powerline 12
+audible_bell = false
 visible_bell = false
 scrollback_lines = 10000
 clickable_url = false

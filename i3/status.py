@@ -23,15 +23,13 @@ status.register("battery",
 
 # Note: requires both netifaces and basiciw (for essid and quality)
 status.register("network",
-    interface="wlp2s0",
+    interface="wlp58s0",
     format_up="📶 {essid} {quality:3.0f}%",)
 
 status.register("openvpn",
-    vpn_name="AU_Melbourne",
-    openvpn_lastest=True,)
-    # status_command="bash -c 'systemctl show openvpn-client@%(vpn_name)s | grep ActiveState=active'",
-    # vpn_up_command = "sudo /bin/systemctl start openvpn-client@%(vpn_name)s.service",
-    # vpn_down_command = "sudo /bin/systemctl stop openvpn-client@%(vpn_name)s.service",)
+    # vpn_name="AU_Melbourne",
+    vpn_name="US_California",
+    use_new_service_name=True,)
 
 status.register("disk",
     path="/",
