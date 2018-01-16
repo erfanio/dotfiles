@@ -28,10 +28,6 @@ This could also be in `~/fontconfig/fonts.conf` I prefer system wide configs.
 <fontconfig>
   <!-- Set preferred serif, sans serif, and monospace fonts. -->
   <alias>
-    <family>serif</family>
-    <prefer><family>Noto Serif</family></prefer>
-  </alias>
-  <alias>
     <family>sans-serif</family>
     <prefer><family>Noto Sans</family></prefer>
   </alias>
@@ -51,20 +47,36 @@ This could also be in `~/fontconfig/fonts.conf` I prefer system wide configs.
       <string>Emoji</string>
     </edit>
   </match>
-
   <match>
     <test name="family"><string>sans-serif</string></test>
     <edit name="family" mode="prepend" binding="weak">
       <string>Emoji</string>
     </edit>
   </match>
-
   <match>
     <test name="family"><string>monospace</string></test>
     <edit name="family" mode="prepend" binding="weak">
       <string>Emoji</string>
     </edit>
   </match>
+
+  <!-- override some popular fonts, since some fonts *cough* Nimbus *cough* are aggressively aliasing MS fonts :| -->
+  <alias binding="same">
+    <family>Ariel</family>
+    <prefer><family>Noto Sans</family></prefer>
+  </alias>
+  <alias binding="same">
+    <family>Helvetica</family>
+    <prefer><family>Noto Sans</family></prefer>
+  </alias>
+  <alias binding="same">
+    <family>Times</family>
+    <prefer><family>Noto Serif</family></prefer>
+  </alias>
+  <alias binding="same">
+    <family>Courier</family>
+    <prefer><family>Source Code Pro</family></prefer>
+  </alias>
 </fontconfig>
 ```
 
