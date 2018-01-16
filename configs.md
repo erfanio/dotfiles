@@ -17,36 +17,50 @@ fi
 Restart=always
 ```
 
-# Emoji
-After installing `noto-emoji-fonts` you need this config to choose emoji priority over other fonts.
+# Fonts and emoji
+After installing `noto-emoji-fonts` you need this config to choose emoji priority over other fonts. This also sets default fonts to the Noto family and Source Code Pro.
 
+This could also be in `~/fontconfig/fonts.conf` I prefer system wide configs.
 `/etc/fonts/local.conf`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
+  <!-- Set preferred serif, sans serif, and monospace fonts. -->
+  <alias>
+    <family>serif</family>
+    <prefer><family>Noto Serif</family></prefer>
+  </alias>
+  <alias>
+    <family>sans-serif</family>
+    <prefer><family>Noto Sans</family></prefer>
+  </alias>
+  <alias>
+    <family>sans</family>
+    <prefer><family>Noto Sans</family></prefer>
+  </alias>
+  <alias>
+    <family>monospace</family>
+    <prefer><family>Source Code Pro</family></prefer>
+  </alias>
+
+  <!-- Set emoji as fallback font -->
   <match>
-    <test name="family">
-      <string>serif</string>
-    </test>
+    <test name="family"><string>serif</string></test>
     <edit name="family" mode="prepend" binding="weak">
       <string>Emoji</string>
     </edit>
   </match>
 
   <match>
-    <test name="family">
-      <string>sans-serif</string>
-    </test>
+    <test name="family"><string>sans-serif</string></test>
     <edit name="family" mode="prepend" binding="weak">
       <string>Emoji</string>
     </edit>
   </match>
 
   <match>
-    <test name="family">
-      <string>monospace</string>
-    </test>
+    <test name="family"><string>monospace</string></test>
     <edit name="family" mode="prepend" binding="weak">
       <string>Emoji</string>
     </edit>
@@ -92,3 +106,8 @@ Section "Device"
     Option      "TearFree" "true"
 EndSection
 ```
+
+# Power button
+Configure power button to put laptop to sleep (not shutdown).
+
+Find `#HandlePowerKey=poweroff` in `/etc/systemd/logind.conf`. Uncomment it and change `poweroff` to `suspend`
