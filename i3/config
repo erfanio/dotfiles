@@ -195,7 +195,7 @@ exec --no-startup-id xss-lock -n /home/erfan/.config/i3/dim-screen.sh -- i3lock 
 exec --no-startup-id compton --no-fading-openclose
 
 # set background pic
-exec --no-startup-id feh --bg-scale ~/.fehbg.jpg &
+exec --no-startup-id feh --bg-scale ~/.fehbg.jpg
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% # increase sound volume

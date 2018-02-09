@@ -81,6 +81,7 @@ This could also be in `~/fontconfig/fonts.conf` I prefer system wide configs.
 ```
 
 # Touchpad
+Making touchpads bearable on libinput
 Needed on HiDPI screen to increase cursor velocity
 
 `/etc/X11/xorg.conf.d/99-libinput-custom.conf`
@@ -90,18 +91,8 @@ Section "InputClass"
   MatchDriver "libinput"
   MatchProduct "Touchpad"
   Option "AccelSpeed" "0.8"
-EndSection
-```
-
-Making touchpads bearable on libinput
-
-`/etc/X11/xorg.conf.d/30-touchpad.conf`
-```
-Section "InputClass"
-    Identifier "libinput touchpad catchall"
-    Driver "libinput"
-    Option "Tapping" "on"
-    Option "NaturalScrolling" "true"
+  Option "Tapping" "on"
+  Option "NaturalScrolling" "true"
 EndSection
 ```
 
