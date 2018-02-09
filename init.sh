@@ -14,9 +14,9 @@ git config --global user.email "dev@erfan.io"
 git config --global user.name "erfanio"
 
 # create necessary directories
-mkdir -v ~/.vim 2>/dev/null
 mkdir -v ~/.config 2>/dev/null
 mkdir -v -p ~/.tmux/plugins 2>/dev/null
+mkdir -v -p ~/dotfiles/.vim/temp/undodir 2>/dev/null
 
 # load tmux package manager
 echo "Installing TPM"
@@ -30,7 +30,6 @@ echo "To Install VIM Plugins, Run :PlugInstall when you first start vim"
 # symlinks
 ln -v -s ~/dotfiles/.zshrc ~/.zshrc
 touch ~/.zshrc_custom
-ln -v -s ~/dotfiles/.vimrc ~/.vimrc
-ln -v -s ~/dotfiles/.vim_runtime ~/.vim_runtime
+ln -v -s ~/dotfiles/.vim ~/.vim
 ln -v -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -v -s ~/dotfiles/termite ~/.config/termite
