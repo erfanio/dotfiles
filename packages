@@ -1,3 +1,4 @@
+1password-cli
 adobe-source-code-pro-fonts
 arandr
 autoconf
@@ -15,8 +16,10 @@ dialog
 diffutils
 dmenu
 dmidecode
+dunst
 e2fsprogs
 efibootmgr
+eog
 fakeroot
 feh
 file
@@ -50,6 +53,7 @@ iproute2
 iputils
 iw
 jfsutils
+jq
 less
 libtool
 licenses
