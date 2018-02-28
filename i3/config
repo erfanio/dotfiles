@@ -215,5 +215,8 @@ exec --no-startup-id albert
 # fsearch
 bindsym $mod+Shift+f exec fsearch
 
+# 1pass
+bindsym $mod+Shift+p exec $GOBIN/1pass
+
 # clipboard manager
 exec --no-startup-id xfce4-clipman
