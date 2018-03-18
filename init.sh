@@ -7,7 +7,7 @@ echo "Setup OH MY ZSH"
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 curl -fLo ~/.oh-my-zsh/custom/bullet-train.zsh-theme --create-dirs http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
 # font is needed for rendering tmux/zsh/vim themes
-sudo curl -Lo /usr/share/fonts/OTF/source-code-pro-powerline.otf https://raw.githubusercontent.com/powerline/fonts/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
+curl -Lo .fonts/OTF/source-code-pro-powerline.otf --create-dirs https://raw.githubusercontent.com/powerline/fonts/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
 
 # setting up git
 git config --global user.email "dev@erfan.io"
