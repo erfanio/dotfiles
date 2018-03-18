@@ -1,1 +1,3 @@
-temp_dirs
+.vim/temp/
+.vim/autoload/
+.vim/plugged/
