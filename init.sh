@@ -18,6 +18,13 @@ mkdir -v ~/.config 2>/dev/null
 mkdir -v -p ~/.tmux/plugins 2>/dev/null
 mkdir -v -p ~/dotfiles/.vim/temp/undodir 2>/dev/null
 
+# symlinks
+ln -v -s ~/dotfiles/.zshrc ~/.zshrc
+touch ~/.zshrc_custom
+ln -v -s ~/dotfiles/.vim ~/.vim
+ln -v -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -v -s ~/dotfiles/termite ~/.config/termite
+
 # load tmux package manager
 echo "Installing TPM"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -26,10 +33,3 @@ echo "To Install TMUX Plugins, Press prefix + I when you first start tmux"
 echo "Installing VIM PLUG"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "To Install VIM Plugins, Run :PlugInstall when you first start vim"
-
-# symlinks
-ln -v -s ~/dotfiles/.zshrc ~/.zshrc
-touch ~/.zshrc_custom
-ln -v -s ~/dotfiles/.vim ~/.vim
-ln -v -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -v -s ~/dotfiles/termite ~/.config/termite
