@@ -27,8 +27,7 @@ status.register("network",
     format_up="📶 {essid} {quality:3.0f}%",)
 
 status.register("openvpn",
-    # vpn_name="AU_Melbourne",
-    vpn_name="US_California",
+    vpn_name="AU_Melbourne",
     use_new_service_name=True,)
 
 status.register("disk",

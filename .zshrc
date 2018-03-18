@@ -26,9 +26,6 @@ export LANG=en_US.UTF-8
 alias opd="xdg-open . & ; disown xdg-open"
 alias xclip-copy="xclip -selection clipboard -i"
 
-export GOPATH=$HOME/go
-export GOBIN=$HOME/go/bin
-
 export VISUAL="vim"
 export TERMINAL=termite
 

@@ -189,10 +189,10 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 
 # setup autolock
-exec --no-startup-id xss-lock -n /home/erfan/.config/i3/dim-screen.sh -- i3lock -c 000000
+exec --no-startup-id XSECURELOCK_AUTH=auth_pam_x11 XSECURELOCK_SAVER=saver_blank XSECURELOCK_WANT_FIRST_KEYPRESS=1 xss-lock -n /home/erfan/.config/i3/dim-screen.sh -- xsecurelock
 
-# start compton
-exec --no-startup-id compton --no-fading-openclose
+# start compton when needed
+bindsym $mod+Shift+a compton --no-fading-openclose
 
 # set background pic
 exec --no-startup-id feh --bg-scale ~/.fehbg.jpg
@@ -216,7 +216,7 @@ exec --no-startup-id albert
 bindsym $mod+Shift+f exec fsearch
 
 # 1pass
-bindsym $mod+Shift+p exec $GOBIN/1pass
+bindsym $mod+Shift+p exec $GOPATH/bin/1pass
 
 # clipboard manager
 exec --no-startup-id xfce4-clipman
