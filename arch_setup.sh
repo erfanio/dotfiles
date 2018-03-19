@@ -14,6 +14,7 @@ rm yaourt package-query -rf
 echo "Symlink arch specific configs"
 ln -v -s ~/dotfiles/i3 ~/.config/i3
 ln -v -s ~/dotfiles/.xinitrc ~/.xinitrc
+ln -v -s ~/dotfiles/.Xresources ~/.Xresources
 
 echo "Creating a new SSH key"
 ssh-keygen -t rsa -b 4096 -o -a 100
