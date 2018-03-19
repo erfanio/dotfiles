@@ -4,6 +4,7 @@ arandr
 autoconf
 automake
 bash
+bind-tools
 binutils
 bison
 bzip2
@@ -20,6 +21,7 @@ dunst
 e2fsprogs
 efibootmgr
 eog
+evince
 fakeroot
 feh
 file
@@ -55,6 +57,7 @@ iw
 jfsutils
 jq
 less
+libreoffice-fresh
 libtool
 licenses
 light
@@ -68,6 +71,7 @@ man-db
 man-pages
 mdadm
 nano
+net-tools
 netctl
 network-manager-applet
 networkmanager
@@ -95,6 +99,7 @@ python-basiciw
 python-colour
 python-netifaces
 python-pip
+qt4
 ranger
 reiserfsprogs
 ripgrep
@@ -118,6 +123,7 @@ unzip
 usbutils
 util-linux
 vi
+vlc
 which
 wpa_supplicant
 xclip
@@ -131,6 +137,7 @@ xorg-xev
 xorg-xinit
 xorg-xinput
 xorg-xset
+xsecurelock-git
 xss-lock
 yaourt
 zsh
