@@ -1,6 +1,8 @@
 1password-cli
 adobe-source-code-pro-fonts
 arandr
+arc-gtk-theme
+arc-icon-theme
 autoconf
 automake
 bash
@@ -17,6 +19,8 @@ dialog
 diffutils
 dmenu
 dmidecode
+docker
+docker-compose
 dunst
 e2fsprogs
 efibootmgr
@@ -25,10 +29,12 @@ evince
 fakeroot
 feh
 file
+file-roller
 filesystem
 findutils
 firefox-nightly
 flex
+fwupd
 gawk
 gcc
 gcc-libs
@@ -47,9 +53,10 @@ gvim
 gzip
 htop
 i3-wm
-i3lock
 i3pystatus-git
 inetutils
+inkscape
+insomnia
 intel-ucode
 iproute2
 iputils
@@ -70,6 +77,7 @@ make
 man-db
 man-pages
 mdadm
+moka-icon-theme
 nano
 net-tools
 netctl
@@ -79,6 +87,7 @@ nm-connection-editor
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 openssh
 openvpn
 package-query
@@ -118,11 +127,13 @@ texinfo
 thunar
 thunar-volman
 tmux
+tree
 udisks2
 unzip
 usbutils
 util-linux
 vi
+virtualbox
 vlc
 which
 wpa_supplicant
@@ -140,4 +151,5 @@ xorg-xset
 xsecurelock-git
 xss-lock
 yaourt
+yarn
 zsh
