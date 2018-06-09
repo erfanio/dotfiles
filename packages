@@ -1,5 +1,7 @@
 adobe-source-code-pro-fonts
 arandr
+arc-gtk-theme
+arc-icon-theme
 autoconf
 automake
 bash
@@ -51,9 +53,7 @@ gzip
 hplip
 htop
 i3-wm
-i3blocks
 i3pystatus-git
-i3status
 inetutils
 insomnia
 intel-ucode
@@ -76,6 +76,7 @@ make
 man-db
 man-pages
 mdadm
+moka-icon-theme
 nano
 net-tools
 netctl
@@ -144,6 +145,7 @@ xorg-xdpyinfo
 xorg-xev
 xorg-xinit
 xorg-xinput
+xorg-xmessage
 xorg-xset
 xsecurelock-git
 xss-lock
