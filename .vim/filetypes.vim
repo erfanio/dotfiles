@@ -51,12 +51,6 @@ if exists('$TMUX')
     endif
 endif
 
-
-""""""""""""""""""""""""""""""
-" => Twig section
-""""""""""""""""""""""""""""""
-autocmd BufRead *.twig set syntax=html filetype=html
-
 """"""""""""""""""""""""""""""
 " => Go section
 """""""""""""""""""""""""""""""
