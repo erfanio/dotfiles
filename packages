@@ -13,6 +13,7 @@ bzip2
 compton
 coreutils
 cryptsetup
+cups
 device-mapper
 dhcpcd
 dialog
@@ -51,6 +52,7 @@ groff
 grub
 gvim
 gzip
+hplip
 htop
 i3-wm
 i3pystatus-git
@@ -138,6 +140,7 @@ vlc
 which
 wpa_supplicant
 xclip
+xdotool
 xf86-video-intel
 xfce4-clipman-plugin
 xfsprogs
