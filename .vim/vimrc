@@ -22,6 +22,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'fatih/vim-go'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Initialize plugin system
 call plug#end()
