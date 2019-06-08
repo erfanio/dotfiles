@@ -31,7 +31,7 @@ status.register("openvpn",
     format="{vpn_name} {status} {command_result.out}",
     # get current server status, extract server domain and strip newline
     status_command='bash -c \'nordvpn status | grep "Current server" | awk "{print \\$3}" | tr -d "\\n"\'',
-    vpn_up_command="nordvpn connect",
+    vpn_up_command="nordvpn connect Australia Melbourne",
     vpn_down_command="nordvpn disconnect",)
 
 status.register("disk",
