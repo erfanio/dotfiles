@@ -22,6 +22,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 alias opd="xdg-open . & ; disown xdg-open"
 alias xclip-copy="xclip -selection clipboard -i"
