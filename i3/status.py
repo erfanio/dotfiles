@@ -27,12 +27,8 @@ status.register("network",
     format_up="📶 {essid} {quality:3.0f}%",)
 
 status.register("openvpn",
-    vpn_name="NordVPN",
-    format="{vpn_name} {status} {command_result.out}",
-    # get current server status, extract server domain and strip newline
-    status_command='bash -c \'nordvpn status | grep "Current server" | awk "{print \\$3}" | tr -d "\\n"\'',
-    vpn_up_command="nordvpn connect Australia Melbourne",
-    vpn_down_command="nordvpn disconnect",)
+    vpn_name="nordvpn_au298_udp",
+    use_new_service_name=True,)
 
 status.register("disk",
     path="/",

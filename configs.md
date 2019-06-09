@@ -20,7 +20,7 @@ Restart=always
 # Fonts and emoji
 After installing `noto-emoji-fonts` you need this config to choose emoji priority over other fonts. This also sets default fonts to the Noto family and Source Code Pro.
 
-This could also be in `~/fontconfig/fonts.conf` I prefer system wide configs.
+This could also be in `~/fontconfig/fonts.conf` but I prefer system wide configs.
 `/etc/fonts/local.conf`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -114,3 +114,8 @@ EndSection
 Configure power button to put laptop to sleep (not shutdown).
 
 Find `#HandlePowerKey=poweroff` in `/etc/systemd/logind.conf`. Uncomment it and change `poweroff` to `suspend`
+
+# To update list of packages
+```
+sudo pacman -Qeq | grep -v -E "($(sudo pacman -Qeg base base-devel | awk '{ print $2 }' | paste -sd "|"))"
+```

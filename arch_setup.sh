@@ -5,8 +5,8 @@ git clone https://aur.archlinux.org/package-query.git
 cd package-query
 makepkg -si
 cd ..
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt
+git clone https://aur.archlinux.org/yay.git
+cd yay
 makepkg -si
 cd ..
 rm yaourt package-query -rf
@@ -20,7 +20,7 @@ echo "Creating a new SSH key"
 ssh-keygen -t rsa -b 4096 -a 100
 
 echo "Installing packages"
-yaourt -Sy $(cat dotfiles/packages) --noconfirm
+yay -Sy $(cat dotfiles/packages) --noconfirm
 
 echo "Setting default apps"
 xdg-mime default Thunar.desktop inode/directory
