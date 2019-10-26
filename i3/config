@@ -210,13 +210,13 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym Print exec --no-startup-id gnome-screenshot -a -c
 
 # albert
-exec --no-startup-id albert
+# exec --no-startup-id albert
 
 # fsearch
 bindsym $mod+Shift+f exec fsearch
 
 # 1pass
-bindsym $mod+Shift+p exec $GOPATH/bin/1pass
+# bindsym $mod+Shift+p exec $GOPATH/bin/1pass
 
 # clipboard manager
 exec --no-startup-id xfce4-clipman
