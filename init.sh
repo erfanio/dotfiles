@@ -6,8 +6,7 @@ mv -v ~/.zsh ~/.zsh.orig
 echo "Setup OH MY ZSH"
 git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 curl -fLo ~/.oh-my-zsh/custom/bullet-train.zsh-theme --create-dirs http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
-# font is needed for rendering tmux/zsh/vim themes
-curl -Lo .fonts/OTF/source-code-pro-powerline.otf --create-dirs https://raw.githubusercontent.com/powerline/fonts/master/SourceCodePro/Source%20Code%20Pro%20for%20Powerline.otf
+sudo usermod --shell /bin/zsh $USER
 
 # setting up git
 git config --global user.email "dev@erfan.io"
@@ -28,8 +27,12 @@ ln -v -s ~/dotfiles/termite ~/.config/termite
 # load tmux package manager
 echo "Installing TPM"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-echo "To Install TMUX Plugins, Press prefix + I when you first start tmux"
 # load vim plug (package manager)
 echo "Installing VIM PLUG"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-echo "To Install VIM Plugins, Run :PlugInstall when you first start vim"
+
+echo "
+TODO:
+- Install tmux plugins by pressing prefix + I in tmux, allow a few seconds and close tmux
+- Install vim plugins by opening vim and running :PlugInstall
+"
