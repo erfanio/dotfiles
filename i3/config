@@ -120,8 +120,6 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -162,15 +160,6 @@ bar {
         workspace_buttons yes
 }
 
-# enable notifications
-exec --no-startup-id /usr/bin/dunst -config /home/erfan/.config/i3/dunstrc
-
-# enable redshift
-exec --no-startup-id redshift-gtk
-
-# networkmanager
-exec --no-startup-id nm-applet
-
 # shutdown, reboot, lock
 set $Locker sleep 1 && xset dpms force off
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -186,37 +175,15 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+Escape mode "$mode_system"
 
 # setup autolock
-exec --no-startup-id XSECURELOCK_AUTH=auth_pam_x11 XSECURELOCK_SAVER=saver_blank XSECURELOCK_WANT_FIRST_KEYPRESS=1 xss-lock -n /home/erfan/.config/i3/dim-screen.sh -- xsecurelock
+exec --no-startup-id XSECURELOCK_AUTH=auth_pam_x11 XSECURELOCK_SAVER=saver_blank XSECURELOCK_WANT_FIRST_KEYPRESS=1 xss-lock -- xsecurelock
 
-# start compton when needed
-bindsym $mod+Shift+a compton --no-fading-openclose
+# Tray stuff
+exec --no-startup-id nm-applet
+exec --no-startup-id pamac-tray
 
-# set background pic
-exec --no-startup-id feh --bg-scale ~/.fehbg.jpg
-
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% # increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% # decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
-
-# Brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
-
-# screenshot
-bindsym Print exec --no-startup-id gnome-screenshot -a -c
-
-# albert
-# exec --no-startup-id albert
-
-# fsearch
-bindsym $mod+Shift+f exec fsearch
-
-# 1pass
-# bindsym $mod+Shift+p exec $GOPATH/bin/1pass
-
-# clipboard manager
-exec --no-startup-id xfce4-clipman
+# i3-gnome stuff
+exec --no-startup-id /usr/bin/gnome-flashback
+exec --no-startup-id /usr/bin/gnome-screensaver

@@ -25,10 +25,22 @@ ssh-keygen -t rsa -b 4096 -a 100
 echo "Installing packages"
 yay -Sy $(cat dotfiles/packages) --noconfirm
 
-echo "Setting default apps"
-xdg-mime default Thunar.desktop inode/directory
+echo "Install i3-gnome"
+git clone https://github.com/i3-gnome/i3-gnome.git
+cd i3-gnome
+sudo make install
+cd ..
 
-echo "
-TODO:
-- You need to download something to .fehbg.jpg
-"
+gsettings set org.gnome.gnome-flashback desktop false
+
+echo "Setting up VPN"
+cat >> /etc/systemd/system/openvpn-reconnect.service <<EOD
+[Unit]
+Description=Restart OpenVPN after suspend
+
+[Service]
+ExecStart=/usr/bin/pkill --signal SIGHUP --exact openvpn
+
+[Install]
+WantedBy=sleep.target
+EOD

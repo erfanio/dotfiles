@@ -20,6 +20,7 @@ firefox-nightly
 fwupd
 gimp
 git
+gnome-flashback
 gnome-keyring
 gnome-screenshot
 go
@@ -28,6 +29,7 @@ grub
 gvim
 hplip
 htop
+i3-gnome
 i3-wm
 i3pystatus-git
 inkscape
@@ -49,10 +51,8 @@ noto-fonts-emoji
 npm
 openssh
 openvpn
-openvpn-nordvpn
 package-query
 pavucontrol
-private-internet-access-vpn
 pulseaudio
 pulseaudio-alsa
 pulseaudio-zeroconf
