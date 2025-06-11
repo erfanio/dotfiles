@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# save previous zshrc
-mv -v ~/.zsh ~/.zsh.orig
 
 # setup oh my zsh
 echo "Setup OH MY ZSH"
@@ -15,21 +13,20 @@ git config --global user.name "erfanio"
 # create necessary directories
 mkdir -v ~/.config 2>/dev/null
 mkdir -v -p ~/.tmux/plugins 2>/dev/null
-mkdir -v -p ~/dotfiles/.vim/temp/undodir 2>/dev/null
+mkdir -v -p ~/dotfiles/vim/temp/undodir 2>/dev/null
 
 # symlinks
 ln -v -s ~/dotfiles/.zshrc ~/.zshrc
 touch ~/.zshrc_custom
-ln -v -s ~/dotfiles/.vim ~/.vim
+ln -v -s ~/dotfiles/vim ~/.config/nvim
 ln -v -s ~/dotfiles/.tmux.conf ~/.tmux.conf
-ln -v -s ~/dotfiles/termite ~/.config/termite
 
 # load tmux package manager
 echo "Installing TPM"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # load vim plug (package manager)
 echo "Installing VIM PLUG"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/dotfiles/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "
 TODO:

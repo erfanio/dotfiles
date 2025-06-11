@@ -1,4 +1,3 @@
-.vim/temp/
-.vim/autoload/
-.vim/plugged/
-__pycache__
+vim/temp/
+vim/autoload/
+vim/plugged/
