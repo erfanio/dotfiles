@@ -1,0 +1,13 @@
+{
+    "workbench.startupEditor": "none",
+    "diffEditor.codeLens": true,
+    "telemetry.telemetryLevel": "off",
+    "telemetry.feedback.enabled": false,
+    "vim.handleKeys": {
+        "<C-f>": false
+    },
+    "geminicodeassist.rules": "Use Google style guide. Avoid excessive comments.",
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+    "geminicodeassist.enableTelemetry": false,
+    "files.autoSave": "onFocusChange"
+}

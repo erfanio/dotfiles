@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+f",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroupWithoutWrap"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroupWithoutWrap"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusBelowGroupWithoutWrap"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusAboveGroupWithoutWrap"
+    }
+]

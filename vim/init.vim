@@ -36,6 +36,8 @@ set expandtab
 filetype plugin indent on
 " Enable syntax highlighting
 syntax on
+" Color scheme
+color industry
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
