@@ -1,6 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+if [[ $OSTYPE == darwin* ]]; then
+  # Tell zsh to use GNU ls otherwise color gets messed up.
+  zstyle ':omz:lib:theme-and-appearance' gnu-ls yes
+fi
+
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -122,3 +128,9 @@ alias xclip-copy="xclip -selection clipboard -i"
 alias v="nvim"
 
 source $HOME/.cargo/env
+
+if [[ $OSTYPE == darwin* ]]; then
+  # Force GNU coreutils, findutils, awk, sed, and tar.
+  PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+  MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$MANPATH"
+fi
