@@ -13,6 +13,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'tomasr/molokai'
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
@@ -133,3 +134,6 @@ map <leader>o :BufExplorer<cr>
 """"""""""""
 " go uses tabs not spaces
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2 
+
+" Setup rust-analyzer
+lua vim.lsp.enable('rust_analyzer')
