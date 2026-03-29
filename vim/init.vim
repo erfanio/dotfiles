@@ -12,6 +12,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
@@ -37,7 +38,7 @@ filetype plugin indent on
 " Enable syntax highlighting
 syntax on
 " Color scheme
-color industry
+color molokai
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
@@ -90,8 +91,10 @@ set whichwrap+=<,>,h,l,[,]
 set scrolloff=10
 
 " Misc
-set mouse+=a        " mouse support
-set number          " line number
+set mouse+=a                 " mouse support
+set number                   " line number
+let g:loaded_matchparen = 1  " disable match paren highligh
+
 
 " No annoying sound on errors
 set noerrorbells

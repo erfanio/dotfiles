@@ -120,3 +120,5 @@ setopt -o sharehistory
 
 alias xclip-copy="xclip -selection clipboard -i"
 alias v="nvim"
+
+source $HOME/.cargo/env
