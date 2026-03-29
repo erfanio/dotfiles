@@ -1,0 +1,6 @@
+# Change the cursor to always be black text on while bg.
+# This changes the default behaviour which is inverting text and bg color which doesn't work well
+# in vim (highlighted text eats your cursor).
+[colors.cursor]
+text = "#000000"
+cursor = "#FFFFFF"

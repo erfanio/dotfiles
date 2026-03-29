@@ -91,9 +91,8 @@ set whichwrap+=<,>,h,l,[,]
 set scrolloff=10
 
 " Misc
-set mouse+=a                 " mouse support
-set number                   " line number
-let g:loaded_matchparen = 1  " disable match paren highligh
+set mouse+=a  " mouse support
+set number    " line number
 
 
 " No annoying sound on errors

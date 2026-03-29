@@ -11,5 +11,9 @@ echo "Creating a new SSH key"
 ssh-keygen -t rsa -b 4096 -a 100
 
 echo "Link sway config"
+mkdir ~/.config/
 ln -v -s ~/dotfiles/waybar ~/.config/waybar
 ln -v -s ~/dotfiles/sway ~/.config/sway
+
+echo "Link Alacritty config"
+ln -v -s ~/dotfiles/alacritty ~/.config/alacritty
