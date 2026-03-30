@@ -1,3 +1,8 @@
+[font]
+normal = { family = "Source Code Pro", style = "Regular" }
+bold = { family = "Source Code Pro", style = "Bold" }
+size = 13
+
 # Change the cursor to always be black text on while bg.
 # This changes the default behaviour which is inverting text and bg color which doesn't work well
 # in vim (highlighted text eats your cursor).
