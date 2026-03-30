@@ -32,7 +32,7 @@ nmap <leader>w :w!<cr>
 command W w !sudo tee % > /dev/null
 
 " Default indent settings unless overriden by filetypes
-set shiftwidth=2
+set shiftwidth=4
 set expandtab
 " Enable filetype plugins
 filetype plugin indent on
@@ -77,12 +77,6 @@ au TabLeave * let g:lasttab = tabpagenr()
 " cd to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Dragging panels with mouse in vim
-if &term =~ '^screen'
-  " tmux knows the extended mouse mode
-  set ttymouse=xterm2
-endif
-
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
@@ -108,7 +102,19 @@ set novisualbell
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'minimalist'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_buffers = 0
+" Remove buffer name on the right
+let g:airline#extensions#tabline#show_splits = 0
+" Remove 'tab 3/5' on the right
+let g:airline#extensions#tabline#show_tab_count = 0
+" Remove 'tabs'/'buffers' on the left
+let g:airline#extensions#tabline#show_tab_type = 0
+" Remove buffer # next to tab name
+let g:airline#extensions#tabline#show_tab_nr = 0
+" Remove X close button on the right
+let g:airline#extensions#tabline#show_close_button = 0
+" Make tabs only show the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " NERDTree
 let g:NERDTreeWinPos = "right"
@@ -121,7 +127,7 @@ map <c-b> :CtrlPBuffer<cr>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_use_caching = 0
 if executable('rg')
-  let g:ctrlp_user_command = 'rg --files %s'
+  let g:ctrlp_user_command = 'rg --hidden --iglob="!.git/" --files %s'
 endif
 
 " BufExplorer
@@ -133,7 +139,4 @@ map <leader>o :BufExplorer<cr>
 " Languages
 """"""""""""
 " go uses tabs not spaces
-autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2 
-
-" Setup rust-analyzer
-lua vim.lsp.enable('rust_analyzer')
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
