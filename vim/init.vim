@@ -10,8 +10,6 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
 Plug 'tomasr/molokai'
 Plug 'neovim/nvim-lspconfig'
 
