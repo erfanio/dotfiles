@@ -6,6 +6,11 @@ local default_before_init = vim.lsp.config["rust_analyzer"].before_init
 vim.lsp.config("rust_analyzer", {
     cmd = { "rust-analyzer" },
     filetypes = { "rust" },
+    settings = {
+        ["rust-analyzer"] = {
+            rustc = { source = "discover" },
+        },
+    },
     -- To support rust-lang/rust, we need to detect when we're in the rust repo and use the git root
     -- instead of cargo project root.
     root_dir = function(bufnr, on_dir)
@@ -38,3 +43,4 @@ vim.lsp.config("rust_analyzer", {
 })
 
 vim.lsp.enable("rust_analyzer")
+-- vim.lsp.log.set_level("debug")

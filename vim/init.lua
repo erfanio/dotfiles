@@ -63,7 +63,23 @@ vim.keymap.set("n", "<leader>fg", telescope.live_grep)
 
 local neotree = require('neo-tree.command')
 vim.keymap.set('n', '<leader>nn', function() neotree.execute({ reveal = true, toggle = true }) end)
--- vim.keymap.set('n', '<leader>o',  function() neotree.execute({ source = 'buffers', toggle = true }) end)
+vim.keymap.set('n', '<leader>o',  function() neotree.execute({ source = 'buffers', toggle = true }) end)
+
+-- LSP (set on attach so they're buffer-local)
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        local t = require("telescope.builtin")
+        local opts = { buffer = args.buf }
+        vim.keymap.set("n", "gd",         t.lsp_definitions,         opts)
+        vim.keymap.set("n", "grr",        t.lsp_references,          opts)
+        vim.keymap.set("n", "gri",        t.lsp_implementations,     opts)
+        vim.keymap.set("n", "grt",        t.lsp_type_definitions,    opts)
+        vim.keymap.set("n", "gO",         t.lsp_document_symbols,    opts)
+        vim.keymap.set("n", "<leader>ws", t.lsp_workspace_symbols,   opts)
+        vim.keymap.set("n", "<leader>e",  vim.diagnostic.open_float, opts)
+        vim.keymap.set("n", "<leader>f",  vim.lsp.buf.format,        opts)
+    end,
+})
 
 -----------
 -- Commands
@@ -115,6 +131,12 @@ require("lualine").setup({
 require("neo-tree").setup({
     window = { position = "float" },
     enable_git_status = false,
+    filesystem = {
+        filtered_items = {
+            hide_dotfiles = false,
+            hide_gitignored = true,
+        },
+    },
     default_component_configs = {
         icon = {
             folder_closed = "▶",
@@ -128,10 +150,8 @@ require("neo-tree").setup({
 local actions = require("telescope.actions")
 require("telescope").setup({
     defaults = {
-        file_ignore_patterns = { ".git/" },
         mappings = {
             i = {
-                ["<esc>"] = actions.close,
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
             },
