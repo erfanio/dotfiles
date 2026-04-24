@@ -1,7 +1,7 @@
 -- Capture the default functions from nvim-lspconfig/lsp/rust_analyzer.lua before overriding it.
 -- This file is in after/plugin to guarantee nvim-lspconfig has been initialised already.
-local default_root_dir = vim.lsp.config["rust_analyzer"].root_dir
-local default_before_init = vim.lsp.config["rust_analyzer"].before_init
+local default_root_dir = vim.lsp.config.rust_analyzer.root_dir
+local default_before_init = vim.lsp.config.rust_analyzer.before_init
 
 vim.lsp.config("rust_analyzer", {
     cmd = { "rust-analyzer" },

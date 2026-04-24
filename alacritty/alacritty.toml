@@ -1,19 +1,19 @@
 [font]
 normal = { family = "Source Code Pro", style = "Medium" }
 bold = { family = "Source Code Pro", style = "Bold" }
-size = 13
+size = 12
 
-# Change the cursor to always be black text on while bg.
+# Change the cursor to always be black text on white bg.
 # This changes the default behaviour which is inverting text and bg color which doesn't work well
 # in vim (highlighted text eats your cursor).
 [colors.cursor]
-text = "#000000"
-cursor = "#FFFFFF"
+text = "0x1d1f21"
+cursor = "0xffffff"
 
 # Default colors
 [colors.primary]
 background = "0x1d1f21"
-foreground = "0xc5c8c6"
+foreground = "0xffffff"
 
 # Normal colors
 [colors.normal]
@@ -24,7 +24,7 @@ yellow =  "0xfba922"
 blue =    "0x3971ed"
 magenta = "0xa36ac7"
 cyan =    "0x3971ed"
-white =   "0xc5c8c6"
+white =   "0xffffff"
 
 # Bright colors
 [colors.bright]
