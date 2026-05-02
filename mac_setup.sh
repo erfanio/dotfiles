@@ -13,4 +13,4 @@ defaults write -g InitialKeyRepeat -float 15.0
 defaults write -g KeyRepeat -float 2.0
 
 echo "Install brew then run the following"
-echo "$ brew install ripgrep coreutils findutils gnu-tar gnu-sed gawk aerospace neovim tmux maccy stats karabiner-elements htop font-source-code-pro scroll-reverser"
+echo "$ brew install ripgrep coreutils findutils gnu-tar gnu-sed gawk aerospace neovim tmux maccy stats karabiner-elements htop font-sauce-code-pro-nerd-font scroll-reverser"

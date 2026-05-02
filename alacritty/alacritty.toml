@@ -1,6 +1,6 @@
 [font]
-normal = { family = "Source Code Pro", style = "Medium" }
-bold = { family = "Source Code Pro", style = "Bold" }
+normal = { family = "SauceCodePro Nerd Font", style = "Medium" }
+bold = { family = "SauceCodePro Nerd Font", style = "Bold" }
 size = 12
 
 # Change the cursor to always be black text on white bg.
