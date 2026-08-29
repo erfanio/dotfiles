@@ -219,3 +219,11 @@ end)
 vim.api.nvim_create_autocmd("TabLeave", {
     callback = function() vim.g.lasttab = vim.fn.tabpagenr() end,
 })
+
+-- Dim inactive windows
+local function dim_inactive()
+  vim.api.nvim_set_hl(0, 'Normal',   { bg = 'NONE' })
+  vim.api.nvim_set_hl(0, 'NormalNC', { bg = '#323232' })
+end
+dim_inactive()
+vim.api.nvim_create_autocmd('ColorScheme', { callback = dim_inactive })
