@@ -16,6 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
+  context
   time
   dir
   status
@@ -109,10 +110,14 @@ function withglob { (setopt GLOB; eval "$@") }
 
 alias v="nvim"
 
-source $HOME/.cargo/env
-
 if [[ $OSTYPE == darwin* ]]; then
   # Force GNU coreutils, findutils, awk, sed, and tar.
   PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
   MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:/opt/homebrew/opt/findutils/libexec/gnubin:/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:/opt/homebrew/opt/gnu-tar/libexec/gnubin:$MANPATH"
+  # Other homebrew bins (e.g. bash)
+  PATH="/opt/homebrew/bin:$PATH"
+  # Add Android CLI tools
+  PATH="$PATH:/opt/homebrew/share/android-commandlinetools/platform-tools"
+  # JAVA_HOME
+  export JAVA_HOME="/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"
 fi

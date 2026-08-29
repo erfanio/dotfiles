@@ -2,6 +2,7 @@
 
 echo "Link Aerospace config"
 ln -v -s ~/dotfiles/.aerospace.toml ~/.aerospace.toml
+ln -v -s ~/dotfiles/agents ~/.agents
 
 echo "Link Alacritty config"
 mkdir ~/.config/
